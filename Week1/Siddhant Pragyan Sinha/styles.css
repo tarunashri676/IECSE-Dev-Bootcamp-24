@@ -1,18 +1,23 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
+  /* Body Styling */
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
     background-image: url('https://motionbgs.com/dl/gif/1397');
-    background-size: cover;
-    background-position: center;
+    background-size: cover; /* Ensures the background covers the entire viewport */
+    background-repeat: no-repeat; /* Prevents background repetition */
+    background-attachment: fixed; /* Keeps background fixed during scroll */
+    background-position: center; /* Centers the background image */
   }
   
+  /* Container Styling */
   .container {
     width: 80%;
     max-width: 900px;
@@ -20,6 +25,7 @@
     padding-top: 20px;
   }
   
+  /* Header Styling */
   header {
     display: flex;
     justify-content: space-between;
@@ -39,6 +45,7 @@
     cursor: pointer;
   }
   
+  /* Profile Section */
   .profile {
     text-align: center;
     margin-bottom: 20px;
@@ -52,44 +59,50 @@
     margin-bottom: 20px;
   }
   
+  /* Section Styling */
   section {
     margin-bottom: 30px;
   }
   
-  h2 {
+  .bio h2, .hobbies h2 {
     font-size: 1.8rem;
     color: #fff;
   }
   
+  .bio p, .hobbies ul li {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  /* List Styling */
   ul {
     list-style-type: none;
     padding-left: 0;
   }
   
   ul li {
-    font-size: 1.2rem;
     margin-bottom: 10px;
   }
   
-  .light-mode {
-    background-color: #fff;
-    color: #333;
+  /* Dark Mode */
+  body.dark-mode {
+    background-image: url('https://steamuserimages-a.akamaihd.net/ugc/937184731426030348/29C68CB39A5D2875CF056865323FD746B8E014B6/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');
+    background-size: cover; /* Ensures the new background covers the viewport */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff; /* Ensures text remains readable in dark mode */
   }
   
-  .dark-mode {
-    background-color: #333;
+  body.dark-mode header h1 {
     color: #fff;
   }
   
-  .dark-mode header h1 {
+  body.dark-mode h2, body.dark-mode ul li {
     color: #fff;
   }
   
-  .dark-mode h2, .dark-mode ul li {
-    color: #fff;
-  }
-  
-  .dark-mode .profile-img {
-    border: 3px solid #fff;
+  body.dark-mode .profile-img {
+    border: 3px solid #fff; /* Optional: Adds a border to the profile image in dark mode */
   }
   
